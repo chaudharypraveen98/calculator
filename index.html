@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>react</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://fb.me/react-0.14.3.js"></script>
+    <script src="https://fb.me/react-dom-0.14.3.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js"></script>
+</head>
+<body>
+<div id="container"></div>
+<script type="text/babel">
+    class Calculator extends React.Component{
+        constructor(props){
+            super(props);
+            this.state={
+                display:0,
+                eq:'',
+            };
+        }
+        operator(value){
+            let b = value;
+            b=this.state.eq+b;
+            this.setState({eq:b});
+        }
+        result=()=>{
+            let b = eval(this.state.eq);
+            this.setState({display:b,eq:''});
+        }
+        inputNo(value){
+            let b = value ;
+            this.setState({display:b});
+            b=this.state.eq+b;
+            this.setState({eq:b});
+        }
+        reset=()=>{
+            this.setState({display:0,eq:''});
+        }
+        render () {
+            return (<div className="commentContainer">
+                    <div className="displayScreen">{this.state.display}</div>
+                    <div className="number1" onClick={()=>this.inputNo("1")} value="1">1</div>
+                    <div className="number2" onClick={()=>this.inputNo("2")} value="2">2</div>
+                    <div className="number3" onClick={()=>this.inputNo("3")} value="3">3</div>
+                    <div className="number4" onClick={()=>this.inputNo("4")} value="4">4</div>
+                    <div className="number5" onClick={()=>this.inputNo("5")} value="5">5</div>
+                    <div className="number6" onClick={()=>this.inputNo("6")} value="6">6</div>
+                    <div className="number7" onClick={()=>this.inputNo("7")} value="7">7</div>
+                    <div className="number8" onClick={()=>this.inputNo("8")} value="8">8</div>
+                    <div className="number9" onClick={()=>this.inputNo("9")} value="9">9</div>
+                    <div className="number0" onClick={()=>this.inputNo("0")} value="0">0</div>
+                    <div className="add" onClick={()=>this.operator("+")} value="+">+</div>
+                    <div className="sub" onClick={()=>this.operator("-")} value="-">-</div>
+                    <div className="mul" onClick={()=>this.operator("*")}  value="*">*</div>
+                    <div className="div" onClick={()=>this.operator("/")} value="/">/</div>
+                    <div className="aC" onClick={this.reset}>AC</div>
+                    <div className="equal" onClick={this.result}>=</div>
+                </div>
+            );
+        }
+    }
+    ReactDOM.render(<Calculator/>,document.getElementById('container'));
+</script>
+</body>
+</html>
