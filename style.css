@@ -1,0 +1,131 @@
+.container{
+    background-color: red;
+}
+.head{
+    grid-area: hea;
+    font-size: 48px;
+    font-weight: 500;
+    margin-top: 10px;
+    text-align: center;
+    border-bottom: black 2px solid;
+}
+.commentContainer{
+    display: grid;
+    font-weight: 500;
+    background-color: royalblue;
+    min-height: 500px;
+    max-width: 500px;
+    grid-template-areas:
+            'hea hea hea hea'
+            'dis dis dis ac'
+            'num7 num8 num9 div'
+            'num4 num5 num6 mul'
+            'num1 num2 num3 sub'
+            'num0 dec equal add';
+    grid-gap: 10px;
+    border: solid black 2px;
+}
+.equal{
+    grid-area: equal;
+    background-color: #ffa500;
+    color: black;
+    text-align: center;
+}
+.decimal{
+    grid-area: dec;
+    text-align: center;
+    background-color: grey;
+}
+.aC{
+    grid-area: ac;
+    background-color: #ffa500;
+    color: black;
+    text-align: center;
+}
+.number1{
+    grid-area: num1;
+    text-align: center;
+    background-color: grey;
+}
+.number2{
+    grid-area: num2;
+    text-align: center;
+    background-color: grey;
+}
+.number3{
+    grid-area: num3;
+    text-align: center;
+    background-color: grey;
+}
+.number4{
+    grid-area: num4;
+    text-align: center;
+    background-color: grey;
+}
+.number5{
+    grid-area: num5;
+    text-align: center;
+    background-color: grey;
+}
+.number6{
+    grid-area: num6;
+    text-align: center;
+    background-color: grey;
+}
+.number7{
+    grid-area: num7;
+    text-align: center;
+    background-color: grey;
+}
+.number8{
+    grid-area: num8;
+    text-align: center;
+    background-color: grey;
+}
+.number9{
+    grid-area: num9;
+    text-align: center;
+    background-color: grey;
+}
+.number0{
+    grid-area: num0;
+    background-color: grey;
+    text-align: center;
+}
+.eq{
+    font-size: 18px;
+}
+.disp{
+    font-size: 24px;
+}
+.displayScreen{
+    grid-area: dis;
+    color: white;
+    text-align: right;
+    background-color: black;
+    border: 2px solid black;
+ }
+ .add{
+     grid-area: add;
+     background-color: #ffa500;
+     color: black;
+     text-align: center;
+ }
+ .sub{
+     grid-area: sub;
+     background-color: #ffa500;
+     color: black;
+     text-align: center;
+ }
+ .mul{
+     grid-area: mul;
+     background-color: #ffa500;
+     color: black;
+     text-align: center;
+ }
+ .div{
+     grid-area: div;
+     background-color: #ffa500;
+     color: black;
+     text-align: center;
+ }

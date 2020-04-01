@@ -39,7 +39,13 @@
         }
         render () {
             return (<div className="commentContainer">
-                    <div className="displayScreen">{this.state.display}</div>
+                        <div className="head">
+                            <div>Calculator</div>
+                        </div>
+                    <div className="displayScreen">
+                        <div className="eq">{this.state.eq}</div>
+                        <div className="disp">{this.state.display}</div>
+                    </div>
                     <div className="number1" onClick={()=>this.inputNo("1")} value="1">1</div>
                     <div className="number2" onClick={()=>this.inputNo("2")} value="2">2</div>
                     <div className="number3" onClick={()=>this.inputNo("3")} value="3">3</div>
@@ -50,6 +56,7 @@
                     <div className="number8" onClick={()=>this.inputNo("8")} value="8">8</div>
                     <div className="number9" onClick={()=>this.inputNo("9")} value="9">9</div>
                     <div className="number0" onClick={()=>this.inputNo("0")} value="0">0</div>
+                    <div className="decimal" onClick={()=>this.inputNo(".")} value=".">.</div>
                     <div className="add" onClick={()=>this.operator("+")} value="+">+</div>
                     <div className="sub" onClick={()=>this.operator("-")} value="-">-</div>
                     <div className="mul" onClick={()=>this.operator("*")}  value="*">*</div>
