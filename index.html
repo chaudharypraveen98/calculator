@@ -16,26 +16,26 @@
             super(props);
             this.state={
                 display:0,
-                eq:'',
+                equation:'',
             };
         }
         operator(value){
             let b = value;
-            b=this.state.eq+b;
-            this.setState({eq:b});
+            b=this.state.equation+b;
+            this.setState({equation:b});
         }
         result=()=>{
-            let b = eval(this.state.eq);
-            this.setState({display:b,eq:''});
+            let b = eval(this.state.equation);
+            this.setState({display:b,equation:''});
         }
         inputNo(value){
             let b = value ;
             this.setState({display:b});
-            b=this.state.eq+b;
-            this.setState({eq:b});
+            b=this.state.equation+b;
+            this.setState({equation:b});
         }
         reset=()=>{
-            this.setState({display:0,eq:''});
+            this.setState({display:0,equation:''});
         }
         render () {
             return (<div className="commentContainer">
@@ -43,7 +43,7 @@
                             <div>Calculator</div>
                         </div>
                     <div className="displayScreen">
-                        <div className="eq">{this.state.eq}</div>
+                        <div className="eq">{this.state.equation}</div>
                         <div className="disp">{this.state.display}</div>
                     </div>
                     <div className="number1" onClick={()=>this.inputNo("1")} value="1">1</div>
