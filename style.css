@@ -3,18 +3,19 @@
 }
 .head{
     grid-area: hea;
+    color: white;
     font-size: 48px;
     font-weight: 500;
     margin-top: 10px;
     text-align: center;
-    border-bottom: black 2px solid;
 }
 .commentContainer{
     display: grid;
     font-weight: 500;
     background-color: royalblue;
-    min-height: 500px;
-    max-width: 500px;
+    height: 500px;
+    width: 500px;
+    margin: auto;
     grid-template-areas:
             'hea hea hea hea'
             'dis dis dis ac'
@@ -23,7 +24,7 @@
             'num1 num2 num3 sub'
             'num0 dec equal add';
     grid-gap: 10px;
-    border: solid black 2px;
+    border: solid black 5px;
 }
 .equal{
     grid-area: equal;
@@ -42,61 +43,52 @@
     color: black;
     text-align: center;
 }
+.keypad{
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 44px;
+    border: 4px solid white;
+}
 .number1{
     grid-area: num1;
-    text-align: center;
-    background-color: grey;
 }
 .number2{
     grid-area: num2;
-    text-align: center;
-    background-color: grey;
 }
 .number3{
     grid-area: num3;
-    text-align: center;
-    background-color: grey;
 }
 .number4{
     grid-area: num4;
-    text-align: center;
-    background-color: grey;
 }
 .number5{
     grid-area: num5;
-    text-align: center;
-    background-color: grey;
 }
 .number6{
     grid-area: num6;
-    text-align: center;
-    background-color: grey;
 }
 .number7{
     grid-area: num7;
-    text-align: center;
-    background-color: grey;
 }
 .number8{
     grid-area: num8;
-    text-align: center;
-    background-color: grey;
 }
 .number9{
     grid-area: num9;
-    text-align: center;
-    background-color: grey;
 }
 .number0{
     grid-area: num0;
-    background-color: grey;
-    text-align: center;
 }
 .eq{
-    font-size: 18px;
+    font-size: 36px;
+    padding-right: 10px;
 }
 .disp{
-    font-size: 24px;
+    font-size: 44px;
+    padding-right: 10px;
 }
 .displayScreen{
     grid-area: dis;
